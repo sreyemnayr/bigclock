@@ -11,7 +11,9 @@ $(window).load(function() {
         $('#next').bigtext();
 		
         myTimer3();
-		
+		var myTimeInterval=setInterval(function(){myTimer()},1000);
+        var myTimeInterval2=setInterval(function(){myTimer2()},131);
+        
         loadTumbo();
  		
         

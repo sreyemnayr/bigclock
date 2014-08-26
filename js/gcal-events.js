@@ -292,17 +292,17 @@ function myTimer3() {
         var monthNames2 = ["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"];
 
      var d = new Date();
-    document.getElementById("dayOfWeek").innerHTML = (  dayNames[d.getDay()] );
-    document.getElementById("monthOfYear").innerHTML = (  monthNames[d.getMonth()] );
-    document.getElementById("dayOfMonth").innerHTML = (  d.getDate() );
-    document.getElementById("year").innerHTML = (  d.getFullYear() );
+    $('#dayOfWeek').empty().append(dayNames[d.getDay()] );
+    $('#monthOfYear').empty().append(monthNames[d.getMonth()] );
+    $('#dayOfMonth').empty().append(d.getDate() );
+    $('#year').empty().append(d.getFullYear() );
 
-    document.getElementById("dayOfWeek2").innerHTML = (  dayNames2[d.getDay()] );
-    document.getElementById("monthOfYear2").innerHTML = ( monthNames2[d.getMonth()] ) + 
+    $('#dayOfWeek2').empty().append(dayNames2[d.getDay()] );
+    $('#monthOfYear2').empty().append((monthNames2[d.getMonth()] ) + 
                                                         ' ' +
                                                         ( d.getDate() ) + 
                                                         ', ' + 
-                                                        (  d.getFullYear() );
+                                                        (  d.getFullYear() ));
 
     var msUntilMidnight = ( ( 24 - d.getHours() ) * 60 * 60 * 1000 ) +
                               ( ( 60 - d.getMinutes() ) * 60 * 1000 ) +
