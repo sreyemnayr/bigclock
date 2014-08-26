@@ -3,6 +3,7 @@ var tokenArray = ["start", "init"];
 var tokenIndex = 1;
 var nextEventStartDate = Date();
 var eventArray = [];
+var myTimeInterval3 = null;
 
 function getDateLowerLimit() {
     var todayDate;
@@ -281,6 +282,36 @@ function myTimer() {
 function myTimer2() {
     var d = new Date();
     document.getElementById("mseconds").innerHTML = ( ( d.getSeconds() * 1000 ) + d.getMilliseconds() );
+}
+
+function myTimer3() {
+    var dayNames = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+        var monthNames = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+
+        var dayNames2 = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"];
+        var monthNames2 = ["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"];
+
+     var d = new Date();
+    document.getElementById("dayOfWeek").innerHTML = (  dayNames[d.getDay()] );
+    document.getElementById("monthOfYear").innerHTML = (  monthNames[d.getMonth()] );
+    document.getElementById("dayOfMonth").innerHTML = (  d.getDate() );
+    document.getElementById("year").innerHTML = (  d.getFullYear() );
+
+    document.getElementById("dayOfWeek2").innerHTML = (  dayNames2[d.getDay()] );
+    document.getElementById("monthOfYear2").innerHTML = ( monthNames2[d.getMonth()] ) + 
+                                                        ' ' +
+                                                        ( d.getDate() ) + 
+                                                        ', ' + 
+                                                        (  d.getFullYear() );
+
+    var msUntilMidnight = ( ( 24 - d.getHours() ) * 60 * 60 * 1000 ) +
+                              ( ( 60 - d.getMinutes() ) * 60 * 1000 ) +
+                              ( ( 60 - d.getSeconds() ) * 1000 );
+
+    $('#dateDiv').bigtext();
+        $('#dateDiv2').bigtext();
+
+    myTimeInterval3=setTimeout(function(){myTimer3()},msUntilMidnight)
 }
 
 

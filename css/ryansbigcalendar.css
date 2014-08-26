@@ -46,15 +46,15 @@ body {
 		  #pm {}
 
 		  #timeDiv {width:80%; position:relative; display:inline-block; margin-left:5%;}
-		  #timeDateDiv2 {display:block; position:relative; top: 50%; transform: translateY(-50%); }
+		  #timeDateDiv2 {display:block; width: 100%; position:relative; top: 50%; transform: translateY(-50%); }
 		  #time {line-height:.7;}
 		  #dateDiv {width:10%; position:relative; display:inline-block; white-space:normal;}
 		  #timeDateDiv {width:100%; position:relative; display:block; white-space: nowrap; margin-top:3%; margin-bottom:3%;}
 		  #time2{ }
-		  #dateDiv2 {line-height:1;}
+		  #dateDiv2 {line-height:1; width:100%; display:block;}
 		  .section {margin-bottom:125%;  }
 
-		  #dayOfWeek2, #monthOfYear2, #time2 {line-height:.8;}
+		  #dayOfWeek2, #monthOfYear2, #time2 {line-height:.8; display:block; font-size:24pt; }
 
 		  .about {position:relative; top: 50%; transform: translateY(-50%); width:40%; 
 		  	text-align:center; margin:0 auto; border:2px solid; border-color:rgb(247,241,210);
