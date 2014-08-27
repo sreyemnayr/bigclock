@@ -1,7 +1,7 @@
 var dateLowerlimit = "";
 var tokenArray = ["start", "init"];
 var tokenIndex = 1;
-var nextEventStartDate = Date();
+var nextEventStartDate = new Date();
 var eventArray = [];
 var myTimeInterval3 = null;
 
