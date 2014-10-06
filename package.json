@@ -1,0 +1,11 @@
+{
+	"name": "mr-ryans-big-clock",
+	"main": "./html/index.html",
+	"window": {
+		"title": "Mr. Ryan's Big Clock",
+		"toolbar": false,
+		"show_in_taskbar": false,
+		"frame": false
+	},
+	"inject-js-start": "./html/node-webkit/js/inject-js-start.js"
+}
