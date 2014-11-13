@@ -44,6 +44,7 @@ var option = {
   }
 };
 
+
 // Create a shortcut with |option|.
 var shortcut = new gui.Shortcut(option);
 gui.App.registerGlobalHotKey(shortcut);
@@ -63,3 +64,18 @@ var option = {
 // Create a shortcut with |option|.
 var shortcutQuit = new gui.Shortcut(option);
 gui.App.registerGlobalHotKey(shortcutQuit);
+
+var option = {
+  key : "Ctrl+T",
+  active : function() {
+   console.log("Global desktop keyboard shortcut: " + this.key + " active."); 
+    win.showDevTools();
+  },
+  failed : function(msg) {
+    // :(, fail to register the |key| or couldn't parse the |key|.
+    console.log(msg);
+  }
+};
+
+var shortcutDev = new gui.Shortcut(option);
+gui.App.registerGlobalHotKey(shortcutDev);

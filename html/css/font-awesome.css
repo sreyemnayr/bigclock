@@ -766,6 +766,12 @@
 .fa-google-plus:before {
   content: "\f0d5";
 }
+.fa-gooogle-plus-square:before {
+  content: "\f0d4";
+}
+.fa-gooogle-plus:before {
+  content: "\f0d5";
+}
 .fa-money:before {
   content: "\f0d6";
 }
@@ -1360,6 +1366,9 @@
   content: "\f19e";
 }
 .fa-google:before {
+  content: "\f1a0";
+}
+.fa-gooogle:before {
   content: "\f1a0";
 }
 .fa-reddit:before {
