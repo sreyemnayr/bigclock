@@ -28,6 +28,7 @@
 	var googleCalendarId="thegoodshepherdschool.org_8kpisr6p1vn0orfao58uckvo28@group.calendar.google.com";
 	var googleCalendarApiKey="AIzaSyCVRduy3LpfTL0tP8fICaOF0zO3xwqMIjg";
 	var maxGcalEvents = 4;
+	var startLocked = false;
 		
 	//optional parameters-----------------------------------------------
 	//var colorBox=["green","red"];	
@@ -40,9 +41,11 @@
 	<link rel="stylesheet" type="text/css" href="./css/font-awesome.css">
 		<link rel="stylesheet" type="text/css" href="./css/timer.css" />
 		<link rel="stylesheet" type="text/css" href="./css/ryansbigcalendar.css" />
+		<link rel="stylesheet" type="text/css" href="./css/jquery.gritter.css" />
 
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+
 
 	</head>
 
@@ -125,6 +128,8 @@
 							<p><button id="authorize-button" style="visibility: hidden"><i class="fa fa-gooogle"> </i>Authorize Google Calendar</button></p>
 							<p><label for "gcal-address">Google Calendar Public URI:</label><br /><input type="text" name="gcal-address" id="gcal-address" /> <button class="check-button btn btn-default" id="gcal-address-check" type="button"><i class="fa fa-check"> </i> </button></p>
 							<p><label for "gcal-number">Number of Events</label><br /><input type="text" disabled="disabled" /></p>
+							<p><label for "startLocked">Start Locked?</label> <input type="checkbox" id="startLocked" name="startLocked"> </p>
+							
 						</form>
 					</div>
 				</div>
@@ -133,16 +138,17 @@
 		
 
 
-		<script src="./js/jquery.fullPage.js"></script>
-		<script src="./js/jquery.hotkeys.js"></script>
-		<script src="./js/bigtext.js"></script>
-		<script src="./js/gcal-events.js"></script>
-		<script src="./js/jquery.ba-throttle-debounce.js"></script>
-		<script src="./js/timer.js"></script>
+		<script type="text/javascript" src="./js/jquery.fullPage.js"></script>
+		<script type="text/javascript" src="./js/jquery.hotkeys.js"></script>
+		<script type="text/javascript" src="./js/jquery.gritter.js"></script>
+		<script type="text/javascript" src="./js/bigtext.js"></script>
+		<script type="text/javascript" src="./js/gcal-events.js"></script>
+		<script type="text/javascript" src="./js/jquery.ba-throttle-debounce.js"></script>
+		<script type="text/javascript" src="./js/timer.js"></script>
 
-		<script src="./js/ryansbigclock.js"></script>
-		<script src="./js/gcal-auth.js"></script>
-		<script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+		<script type="text/javascript" src="./js/ryansbigclock.js"></script>
+		<script type="text/javascript" src="./js/gcal-auth.js"></script>
+		<script type="text/javascript" src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
 	
   </body>
 </html>
